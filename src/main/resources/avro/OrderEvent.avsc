@@ -1,0 +1,16 @@
+{
+  "type": "record",
+  "name": "OrderEvent",
+  "namespace": "com.demo.shared.events.dto",
+  "fields": [
+    { "name": "orderId", "type": "string" },
+    { "name": "customerId", "type": "string" },
+    { "name": "amount", "type": "double" },
+    { "name": "currency", "type": "string", "default": "USD" },
+    { "name": "status", "type": "string", "default": "PENDING" },
+    { "name": "failureScenario", "type": "string", "default": "NONE" },
+    { "name": "retryCount", "type": "int", "default": 0 },
+    { "name": "message", "type": "string", "default": "" },
+    { "name": "timestamp", "type": { "type": "long", "logicalType": "timestamp-millis" } }
+  ]
+}
